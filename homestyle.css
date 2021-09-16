@@ -1,0 +1,238 @@
+/*homestyle.css*/
+
+	/*Sets the nav bar to have a color gradient and to be fixed at
+	 the top of the screen when scrolling down the webpage*/
+	nav {
+		background: linear-gradient(to bottom, #2838c8, #391fa3);
+		position: fixed;
+		z-index:1;
+		top: 0;
+		width: 100%;
+    }
+
+	/*This removes the bullet points from an unorder list*/
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	/*This makes the nav bar horizontal.
+	Removing this will make the nav bar vertical on the top of the webpage*/
+	li {
+		float: left;
+	}
+
+	/*This sets up the text for the nav bar*/
+	li a {
+		display: block;
+		font-family: Helvetica;
+		font-size: 20px;
+		color: white;
+		text-align: center;
+		padding: 20px 16px;
+		text-decoration: none;
+	}
+
+	/* Change the link color to
+	linear-gradient(to bottom, #c9d3ff, #391fa3) on hover*/
+	li a:hover {
+		background: linear-gradient(to bottom, #111155, #1111aa);
+	}
+
+	/*This prevents the user from scrolling horizontally.
+	This is needed since the background breaks without it.
+	This also fixes the padding around the navbar*/
+	body {
+		overflow-x: hidden;
+		margin:0px;
+	}
+
+	/*This sets up the table's row and column position at the bottom of the webpage*/
+	th, td {
+		width: 250px;
+		overflow: hidden;
+	}
+
+	/*This edits the hr bar*/
+	hr {
+		width: 250px;
+		color: #eeeeee;
+	}
+
+	/*----CLASSES FOR WEBPAGES----*/
+
+	/* This sets up a div that fills up the height of the navbar.
+	This is to fix some elements that broke when changing the navbar
+	to be at a fixed position*/
+	.navfill{
+		margin: auto;
+		margin-top: 63px;
+		border: none;
+	}
+
+	/* This sets up the positioning for the header images for the home page*/
+	.homeheader{
+		height: 400px;
+		border: none;
+		background-image: url("https://webpage.pace.edu/RZ09697P/images/christina-wocintechchat-com-rg1y72eKw6o-unsplash.jpg");
+		background-repeat: no-repeat;
+		background-position: 0px -800px;
+		background-size: 2000px 1500px;
+	}
+
+	/* This sets up the positioning for the logo in the header of the home page*/
+	.homelogo{
+		margin: auto;
+		position: absolute;
+		width: 100%;
+		top: 100px;
+		border: none;
+	}
+
+	/* This sets up the positioning for the images for the home page*/
+	.homeimage{
+		float: left;
+		margin-left: 100px;
+		border: none;
+	}
+
+	/* This sets up the positioning for the homepage text.
+	This is not noticeable unless the user's web browser is in an odd ratio*/
+	.hometext{
+		float: left;
+		margin-left: 200px;
+		margin-bottom: 25px;
+		width: 50%;
+		border: none;
+		font-family: Georgia;
+		line-height: 1.5;
+	}
+
+	/* This sets up the about section of the home page by
+	bundling .homeimage and .hometext*/
+	.homecont{
+		float: left;
+		margin-bottom: 75px;
+		border-style: solid hidden;
+		border-color: #555555;
+		background: #ffffff;
+	}
+
+	/* This sets up the article section of the home page
+	by bundling up multiple .container classes*/
+	.homearticle{
+		float: left;
+		margin: auto;
+		width: 100%;
+	}
+
+	/* This makes it so that multiple div classes can be centered on a homepage.
+	This is used for the first two elements in the article section*/
+	.containerl {
+		text-align: center;
+		font-family: Georgia;
+		line-height: 1.5;
+		float: left;
+		margin-left: 140px;
+		margin-bottom: 75px;
+		width: 300px;
+		border-style: none;
+	}
+
+	/* This makes it so that multiple div classes can be centered on a homepage.
+	This is used for the last two elements in the article section*/
+	.containerr {
+		text-align: center;
+		font-family: Georgia;
+		line-height: 1.5;
+		float: right;
+		margin-right: 140px;
+		margin-bottom: 75px;
+		width: 300px;
+		border-style: none;
+	}
+
+	/* This creates a pattern for the background on the main body for the
+	home webpage*/
+	.gradpattern {
+		background-image: linear-gradient(to bottom, rgba(129,173,255,.25), rgba(255,255,255,1));
+	}
+
+	/* This sets up the positioning for the footer content of the webpage
+	which consist of the grant and the websites funding this website*/
+	.footcont {
+		text-align: center;
+		border: none;
+		font-family: Georgia;
+		line-height: 1.5;
+	}
+
+	/* This sets the return anchor to the very top of the page.
+	We need to do this to fix a bug where the return anchor dosen't send
+	a user to the top of the webpage*/
+	.top {
+		display: block;
+		position: relative;
+		top: -250px;
+		visibility: hidden;
+	}
+
+	/*----CLASSES FOR WEB BROWSERS TO SUPPORT ANIMATIONS----*/
+
+	/* This sets up a fade in animation that should be supported by all
+	web browsers*/
+	.fadein {
+		margin: auto;
+		animation: fadeIn 5s;
+		-webkit-animation: fadeIn 5s;
+		-moz-animation: fadeIn 5s;
+		-o-animation: fadeIn 5s;
+		-ms-animation: fadeIn 5s;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@-moz-keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@-webkit-keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@-o-keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@-ms-keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
